@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="addtoolbarbutton:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/addtoolbarbutton_jar</output-path>
+    <root id="archive" name="addToolbarButton.jar">
+      <element id="extracted-dir" path="$USER_HOME$/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar" path-in-jar="/" />
+      <element id="module-output" name="oXygenAddToolbarButton" />
+    </root>
+  </artifact>
+</component>

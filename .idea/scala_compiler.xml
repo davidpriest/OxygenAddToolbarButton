@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <parameters>
+      <parameter value="-Yresolve-term-conflict:error" />
+    </parameters>
+    <profile name="addToolbarButton" modules="OxygenAddToolbarButton,oXygenAddToolbarButton">
+      <parameters>
+        <parameter value="-Yresolve-term-conflict:error" />
+      </parameters>
+    </profile>
+  </component>
+</project>

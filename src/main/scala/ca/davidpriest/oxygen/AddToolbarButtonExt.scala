@@ -12,11 +12,10 @@ import ro.sync.exml.workspace.api.editor.WSEditor
 import ro.sync.exml.workspace.api.listeners.WSEditorChangeListener
 import ro.sync.exml.workspace.api.standalone.{StandalonePluginWorkspace, ToolbarComponentsCustomizer, ToolbarInfo}
 
-//remove if not needed
-
 class AddToolbarButtonExt extends WorkspaceAccessPluginExtension {
 
-  private val demoButton: JButton = new JButton("AddToolbarButton")
+  private val demoButton: JButton = new JButton("Scala Button")
+  // title not used?
   private var pluginWorkspaceAccess: StandalonePluginWorkspace = _
   private var currentEditor: WSEditor = _
   private var currentEditorLocation: String = _
@@ -53,7 +52,7 @@ class AddToolbarButtonExt extends WorkspaceAccessPluginExtension {
       new ToolbarComponentsCustomizer() {
 
         override def customizeToolbar(toolbarInfo: ToolbarInfo) {
-          if (toolbarInfo.getToolbarID == "AddToolbarButton") { // id from plugin.xml
+          if (toolbarInfo.getToolbarID == "scalatoolbar") { // id from plugin.xml
             demoButton.addActionListener(new ActionListener() {
 
               def actionPerformed(e: ActionEvent) {
@@ -64,7 +63,7 @@ class AddToolbarButtonExt extends WorkspaceAccessPluginExtension {
                   new JFrame(),
                   "\n" + buttonAction.objectAction +
                     "\n" + bAction.classAction,
-                  "Scala Demo: Add Toolbar Button",
+                  "Scala Demo: Add Toolbar Button", // message dialog title bar label
                   JOptionPane.INFORMATION_MESSAGE)
               }
             })
@@ -72,7 +71,7 @@ class AddToolbarButtonExt extends WorkspaceAccessPluginExtension {
             comps.add(demoButton)
             toolbarInfo.setComponents(
               comps.toArray(Array.ofDim[JComponent](0)))
-            toolbarInfo.setTitle("AddToolbarButton") // is top of the title bar
+            toolbarInfo.setTitle("Scala Toolbar") // toolbar name used in 'Configure Toolbars...'
           }
         }
       })
@@ -88,7 +87,7 @@ class AddToolbarButtonExt extends WorkspaceAccessPluginExtension {
       this.currentEditorLocation = currentEditor.getEditorLocation.toString
       if (currentEditorLocation.endsWith(".xsl")) {
         demoButton.setEnabled(true)
-        demoButton.setText("Scala Button Demo") // THIS IS THE BUTTON LABEL
+        demoButton.setText("Scala Toolbar Plugin Demo") // toolbar button label
       } else {
         demoButton.setEnabled(false)
       }

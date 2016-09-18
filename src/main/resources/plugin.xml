@@ -1,6 +1,6 @@
 <!DOCTYPE plugin SYSTEM "../plugin.dtd">
 
-<plugin name="AddToolbarButton"
+<plugin name="Scala Toolbar Demo"
         description="Adds a functional toolbar button to OxygenXML."
         version="0.1.1"
         vendor="davidpriest.ca"
@@ -10,9 +10,8 @@
 
     <runtime>
         <library name="addToolbarButton.jar"/>
-        <library name="lib" scope="global"/>
     </runtime>
 
     <extension type="WorkspaceAccess" class="ca.davidpriest.oxygen.AddToolbarButtonExt"/>
-    <toolbar id="AddToolbarButton" initialSide="NORTH" initialRow="1"/>
+    <toolbar id="scalatoolbar" initialSide="NORTH" initialRow="1"/>
 </plugin>

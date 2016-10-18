@@ -1,8 +1,8 @@
 package ca.davidpriest.addtoolbarbutton
 
-class buttonAction(val document: String) {
+class ButtonAction(val document: String) {
 
-  import buttonAction._
+  import ButtonAction._
 
   def classAction =
     "\nin classAction:" +
@@ -11,7 +11,7 @@ class buttonAction(val document: String) {
       "\n  " + objectAction
 }
 
-object buttonAction {
+object ButtonAction {
 
   val objectVal: String = "object value"
 
@@ -19,7 +19,7 @@ object buttonAction {
     "in objectAction: objectVal = '" + objectVal + "'"
 
   def apply(document: String) = {
-    new buttonAction(document)
+    new ButtonAction(document)
     "buttonAction apply"
   }
 }

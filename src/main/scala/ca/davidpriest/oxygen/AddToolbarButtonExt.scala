@@ -5,7 +5,7 @@ import java.net.URL
 import java.util
 import javax.swing.{JButton, JComponent, JFrame, JOptionPane}
 
-import ca.davidpriest.addtoolbarbutton.buttonAction
+import ca.davidpriest.addtoolbarbutton.ButtonAction
 import ro.sync.exml.plugin.workspace.WorkspaceAccessPluginExtension
 import ro.sync.exml.workspace.api.PluginWorkspace
 import ro.sync.exml.workspace.api.editor.WSEditor
@@ -57,11 +57,11 @@ class AddToolbarButtonExt extends WorkspaceAccessPluginExtension {
 
               def actionPerformed(e: ActionEvent) {
 
-                val bAction = new buttonAction(currentEditorLocation)
+                val bAction = new ButtonAction(currentEditorLocation)
 
                 JOptionPane.showMessageDialog(
                   new JFrame(),
-                  "\n" + buttonAction.objectAction +
+                  "\n" + ButtonAction.objectAction +
                     "\n" + bAction.classAction,
                   "Scala Demo: Add Toolbar Button", // message dialog title bar label
                   JOptionPane.INFORMATION_MESSAGE)
